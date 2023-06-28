@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ListRdsCleanSnapsManual7dayAgo",
+            "Effect": "Allow",
+            "Action": "rds:Describe*",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "RdsCleanSnapsManual7dayAgo",
+            "Effect": "Allow",
+            "Action": "rds:DeleteDBSnapshot",
+            "Resource": [
+                "arn:aws:rds:us-east-1::snapshot:*"
+            ]
+        }
+    ]
+}
